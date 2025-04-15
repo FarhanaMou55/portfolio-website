@@ -1,0 +1,54 @@
+{
+    "categories": [ "ECOMMERCE", "LEARNING MANAGEMENT", "TRAVEL", "CLEANING", "PLUMBER","FOOD"],
+    "projects": [
+      {
+        "title": "E-commerce Website",
+        "category": "ECOMMERCE",
+        "image": "/src/assets/1.jpg",
+        "description": "A responsive modern shop with cart and Stripe payments. Built with React and Tailwind CSS.",
+        "github": "https://github.com/farhanamou/shopnest",
+        "live": "https://shopnest-demo.vercel.app"
+      },
+      {
+        "title": "LMS Platform",
+        "category": "LEARNING MANAGEMENT",
+        "image": "/src/assets/2.jpg",
+        "description": "An online course platform with quizzes, video uploads, and student dashboards.",
+        "github": "https://github.com/farhanamou/learnhub",
+        "live": "https://learnhub-demo.vercel.app"
+      },
+      {
+        "title": "Travel Booking Site",
+        "category": "TRAVEL",
+        "image": "/src/assets/3.jpg",
+        "description": "Plan and book tours with ease. Includes search filters, packages, and reviews.",
+        "github": "https://github.com/farhanamou/wanderly",
+        "live": "https://wanderly-travel.vercel.app"
+      },
+      {
+        "title": "Cleaning Services",
+        "category": "CLEANING",
+        "image": "/src/assets/4.jpg",
+        "description": "Service site for cleaning businesses with booking system and customer reviews.",
+        "github": "https://github.com/farhanamou/cleanpro",
+        "live": "https://cleanpro-services.vercel.app"
+      },
+      {
+        "title": "Plumber Website",
+        "category": "PLUMBER",
+        "image": "/src/assets/2.jpg",
+        "description": "A plumber booking site with location pricing, service lists, and contact form.",
+        "github": "https://github.com/farhanamou/fixit-plumber",
+        "live": "https://fixitplumber.vercel.app"
+      },{
+        "title": "Food Website",
+        "category": "FOOD",
+        "image": "/src/assets/4.jpg",
+        "description": "Food delivery with online ordering and tracking system.",
+        "github": "https://github.com/farhanamou/fixit-plumber",
+        "live": "https://fixitplumber.vercel.app"
+      }
+      
+    ]
+  }
+  
