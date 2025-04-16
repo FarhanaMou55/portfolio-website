@@ -49,7 +49,7 @@ const Services = () => {
             <section id='services ' className='w-full py-15  bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500 inline-block ' >
 
                 <div className='w-10/12 mx-auto '>
-                    <div className='flex flex-col gap-4 font-title  '>
+                    <div className='flex flex-col gap-4 font-title flex-wrap  '>
                         <h3 className='text-md uppercase font-semibold tracking-wide text-white'>My Services</h3>
                         <h1 className='text-5xl font-bold capitalize text-white mb-3'>
 

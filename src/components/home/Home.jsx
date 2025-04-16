@@ -11,6 +11,7 @@ import Contacts from '../contact/Contacts';
 import { PiStarFour } from "react-icons/pi";
 import Marquee from 'react-fast-marquee';
 import ServicesMarquee from './ServicesMarquee';
+import Myskill from './Myskill';
 
   
 
@@ -152,6 +153,7 @@ const Home = () => {
         <Projects />
       </section>
       <ServicesMarquee/>
+      <Myskill/>
 
       <section id="testimonials" className="py-14  ">
         <Testimonials />

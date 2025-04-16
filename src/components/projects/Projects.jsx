@@ -71,7 +71,7 @@ const Projects = () => {
 
       {/* Projects */}
       <div className='bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500'>
-      <div className="grid   w-10/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-20 ">
+      <div className="grid w-10/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-20 ">
         {filteredProjects.map((project, index) => (
           <div key={index} className="bg-white shadow-amber-50   rounded-lg p-4 hover:shadow-md transition">
             <img
