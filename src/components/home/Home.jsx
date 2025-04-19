@@ -54,7 +54,7 @@ const Home = () => {
     
     <section
       id="home"
-      className="w-full py-20 pb-20  pt-24"
+      className="w-full   pt-24"
     >
      <div>
      <div className="w-10/12 mx-auto flex items-center justify-between flex-wrap">
@@ -159,7 +159,7 @@ const Home = () => {
         <Testimonials />
       </section>
 
-      <section id="contacts" className="py-14">
+      <section id="contacts" >
         <Contacts />
       </section>
       </div>

@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <section>
-   <div  className="py-10 w-10/12 mx-auto">
+   <div  className="py-15 w-10/12 mx-auto">
    <h2 className="text-3xl flex justify-center font-bold mb-7">My Projects</h2>
 
 {/* Search bar */}

@@ -55,7 +55,7 @@ const Services = () => {
 
                             What i do
                         </h1>
-                        <div className='grid grid-cols-3 gap-10 '>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-20'>
                             {services.map((service, index) => {
                                 const Icon = {
                                     FaFacebookSquare,
@@ -68,7 +68,7 @@ const Services = () => {
                                 }[service.icon];
 
                                 return (
-                                    <div key={index} className="p-10  rounded-xl text-center shadow-amber-50 shadow transition-all hover:transform-translate-y-l hover:shadow-2xl bg-white">
+                                    <div key={index} className="p-10 mb-8  rounded-xl text-center shadow-amber-50 shadow transition-all hover:transform-translate-y-l hover:shadow-2xl bg-white">
                                         <Icon className="text-4xl text-orange-500 mx-auto mb-4" />
                                         <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                                         <p className="text-gray-600">{service.description}</p>
