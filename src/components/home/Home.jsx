@@ -57,9 +57,9 @@ const Home = () => {
       className="w-full   pt-24"
     >
      <div>
-     <div className="w-10/12 mx-auto flex items-center justify-between flex-wrap">
+     <div className="w-10/12 mx-auto justify-center flex items-center md:justify-between flex-wrap">
         {/* Text Section */}
-        <div className="max-w-xl flex flex-col gap-6">
+        <div className="max-w-xl flex flex-col gap-6 ">
           <h4 className="text-xl font-semibold uppercase">
             Welcome to my website
           </h4>
