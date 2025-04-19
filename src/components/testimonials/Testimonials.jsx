@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 
 const testimonials = [
   {
@@ -26,7 +28,7 @@ const testimonials = [
     title: "Social Media Marketing",
     platform: "via UPWORK",
     quote:
-      "I recently engaged with Farhana's social media marketing services, and I must say, I am thoroughly impressed! She has a deep understanding of the digital landscape, and her strategies have significantly boosted my online presence. She is incredibly knowledgeable and proactive. Her creativity and attention to detail are truly commendable. fantastic experience, and I highly recommend her services to anyone looking to take their social media game to the next level",
+      "I recently engaged with Farhana's social media marketing services, and I must say, I am thoroughly impressed! Her strategies have significantly boosted my online presence. She is incredibly knowledgeable and proactive. Her creativity and attention to detail are truly commendable. ",
   },
   {
     name: "brian adamz",
@@ -35,7 +37,7 @@ const testimonials = [
     title: "Website Development",
     platform: "via UPWORK",
     quote:
-      "Farhana has been a pleasure to deal with. Very responsive, advising, and capable of high-quality design. She was very reasonable in pricing, and that is what attracted me to her. Even when I overpaid here, she chose to refund me. I didn't think it was overpaying. However, his integrity obviously showed great character. I will be using her again for future projects. I highly recommend her.",      
+      "Farhana has been a pleasure to deal with. Very responsive, advising, and capable of high-quality design. She was very reasonable in pricing, and that is what attracted me to her. Even when I overpaid here, she chose to refund me. I didn't think it was overpaying. However, his integrity obviously showed great character.",
   },
   {
     name: "bilal_asghar",
@@ -44,75 +46,103 @@ const testimonials = [
     title: "Website Development",
     platform: "via FIVERR",
     quote:
-      "  Overall, I'm incredibly happy with the results and will definitely be using farhanamou828 again for future projects. If you're looking for a talented and reliable website developer for your  needs, look no further! Farhana is the one to go to. She is a master at her craft. I will be coming back again and working long term with her. I highly recommend her.",
+      "   I'm incredibly happy with the results and will definitely be using farhanamou828 again for future projects. If you're looking for a talented and reliable website developer for your  needs, look no further! working long term with her. I highly recommend her.",
   },
 ];
-
 const Testimonials = () => {
-    const [index, setIndex] = useState(0);
-    const [pause, setPause] = useState(false);
-  
-    useEffect(() => {
-      if (pause) return;
-      const interval = setInterval(() => {
-        setIndex((prev) => (prev + 1) % testimonials.length);
-      }, 6000);
-      return () => clearInterval(interval);
-    }, [pause]);
-  
-    const handleDotClick = (i) => setIndex(i);
-  
-    const t = testimonials[index];
-  
+  const [current, setCurrent] = useState(0);
+  const [pause, setPause] = useState(false);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  useEffect(() => {
+    if (pause) return;
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [pause, current]);
 
   return (
-    <div className="w-10/12 max-w-7xl mx-auto py-14">
-      <h2 className="text-3xl md:text-4xl mb-10 font-bold text-center text-gray-800">
-        What Clients Say
-      </h2>
+    <div className="relative w-10/12 mx-auto py-14">
+      <h2 className="text-4xl mb-12 font-bold text-center text-gray-800">What Clients Say</h2>
 
-      <div className="relative transition-all  duration-700 ease-in-out flex flex-col md:flex-row gap-6 items-center md:items-stretch justify-between 
-       "  onMouseEnter={() => setPause(true)}
-       onMouseLeave={() => setPause(false)}>
-        {/* Image / Left */}
-        <div className="w-full shadow-2xl md:w-1/3 h-auto md:h-[500px] text-white bg-gradient-to-r from-yellow-500 via-pink-700 to-orange-500 flex flex-col gap-6 p-6 rounded-xl  text-center justify-center">
-          <img className="h-52 md:h-72 w-full object-cover rounded-3xl mx-auto" src={t.image} alt={t.name} />
-          <h3 className="text-xl md:text-2xl font-bold uppercase">{t.name}</h3>
-          <p className="text-sm md:text-md uppercase tracking-wide">{t.role}</p>
+      {/* Slide */}
+      <div
+        className="relative transition-all duration-700 ease-in-out flex flex-col md:flex-row gap-6 items-center md:items-stretch justify-between"
+        onMouseEnter={() => setPause(true)}
+        onMouseLeave={() => setPause(false)}
+      >
+        {/* Arrows on left and right sides */}
+        <button
+          onClick={prevSlide}
+          className="hidden md:flex absolute top-1/2 left-2 transform -translate-y-1/2 bg-white text-pink-700 p-2 rounded-full shadow-md hover:bg-pink-100 z-10"
+          aria-label="Previous"
+        >
+          <FaArrowLeft />
+        </button>
+
+        {/* Left / Image */}
+        <div className="w-full mx-auto shadow-2xl md:w-1/3 h-auto md:h-[500px] text-white bg-gradient-to-r from-yellow-500 via-pink-700 to-orange-500 flex flex-col gap-6 p-6 rounded-xl text-center justify-center">
+          <img className="h-52 md:h-72 w-full object-cover rounded-3xl mx-auto" src={testimonials[current].image} alt={testimonials[current].name} />
+          <h3 className="text-xl md:text-2xl font-bold uppercase">{testimonials[current].name}</h3>
+          <p className="text-sm md:text-md uppercase tracking-wide">{testimonials[current].role}</p>
         </div>
 
-        {/* Text / Right */}
-        <div className="w-full shadow-2xl md:w-2/3 h-auto md:h-[500px] px-4 md:px-14 flex flex-col gap-6 justify-between">
+        {/* Right / Text */}
+        <div className="w-full shadow-2xl md:w-2/3 h-auto md:h-[500px]  flex flex-col gap-6 justify-between">
           <img className="w-16 md:w-20" src="/src/assets/quotation.png" alt="quote" />
           <div className="w-full h-full py-8 md:py-10 rounded-3xl shadow-2xl text-white bg-gradient-to-r from-yellow-500 via-pink-700 to-orange-500 px-6 md:px-14 flex flex-col justify-center gap-6 md:gap-8">
             <div className="border-b-2 border-white pb-4">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold uppercase tracking-wide mb-2 md:mb-4">
-                    {t.title}
+                    {testimonials[current].title}
                   </h3>
-                  <p className="text-sm">{t.platform}</p>
+                  <p className="text-sm">{testimonials[current].platform}</p>
                 </div>
                 <div>
-                  <img className="w-20" src="/src/assets/rating.png" alt="rating" />
+                  <img className="w-28" src="/src/assets/rating.png" alt="rating" />
                 </div>
               </div>
             </div>
-            <p className="text-sm md:text-base font-medium tracking-wide">{t.quote}</p>
+            <p className="text-sm md:text-base font-medium tracking-wide">{testimonials[current].quote}</p>
           </div>
         </div>
+        <button
+          onClick={nextSlide}
+          className="hidden md:flex absolute top-1/2 right-2 transform -translate-y-1/2 bg-white text-pink-700 p-2 rounded-full shadow-md hover:bg-pink-100 z-10"
+          aria-label="Next"
+        >
+          <FaArrowRight />
+        </button>
+
+      </div>
+
+      {/* Arrows */}
+      <div className="md:hidden flex justify-center gap-4 mt-8 text-gray-800 text-xl">
+        <button onClick={prevSlide} aria-label="Previous">
+          <FaArrowLeft />
+        </button>
+        <button onClick={nextSlide} aria-label="Next">
+          <FaArrowRight />
+        </button>
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center mt-8 gap-3 flex-wrap">
+      <div className="flex justify-center mt-4 gap-2">
         {testimonials.map((_, i) => (
-          <button
+          <div
             key={i}
-            onClick={() => handleDotClick(i)}
-            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${
-              i === index ? 'bg-pink-700 scale-110' : 'bg-gray-300'
-            }`}
-          />
+            className={`w-3 h-3 rounded-full ${i === current ? 'bg-pink-700 scale-110' : 'bg-gray-300'} transition-all duration-300`}
+            onClick={() => setCurrent(i)}
+          ></div>
         ))}
       </div>
     </div>
