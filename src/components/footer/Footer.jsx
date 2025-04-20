@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
             <footer className="footer footer-horizontal footer-center  bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500 text-white rounded p-10">
 
-                <div className='w-10/12 mx-auto '>
+                <div className='w-10/12 mx-auto mr-20'>
                     <div >
                         <h1 className='uppercase text-md font-semibold text-base'>Quick Links</h1>
                     </div>
