@@ -152,12 +152,13 @@ const Home = () => {
         <section id="services" className="py-14  ">
           <Services />
         </section>
+        <Myskill />
 
         <section id="projects" className="py-14  ">
           <Projects />
         </section>
         <ServicesMarquee />
-        <Myskill />
+       
 
         <section id="testimonials" className="py-14  ">
           <Testimonials />

@@ -15,11 +15,7 @@ const services = [
         icon: "FaFacebookSquare",
         description: "Boost your business with high-performing Facebook ad campaigns tailored to your target audience."
     },
-    {
-        title: "SEO",
-        icon: "FaSearch",
-        description: "Improve your search engine ranking and organic traffic with modern SEO strategies."
-    },
+    
     {
         title: "Web Development",
         icon: "FaCode",
@@ -40,7 +36,12 @@ const services = [
         title: "Facebook Pixel",
         icon: "FaChartLine",
         description: "Track user interactions on your website to optimize Facebook ad performance and conversions."
-    }
+    },
+    {
+        title: "SEO",
+        icon: "FaSearch",
+        description: "Improve your search engine ranking and organic traffic with modern SEO strategies."
+    },
 ];
 
 const Services = () => {
