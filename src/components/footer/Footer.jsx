@@ -12,7 +12,8 @@ const Footer = () => {
         <div>
             <footer className="footer footer-horizontal footer-center  bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500 text-white rounded p-10">
               
-                    <div >
+                   <div className='w-10/12 mx-auto'>
+                   <div >
                         <h1 className='uppercase text-md font-semibold text-base'>Quick Links</h1>
                     </div>
                     <div className="grid grid-flow-col gap-4">
@@ -40,6 +41,7 @@ const Footer = () => {
                 <aside >
                     <p className='font-bold'>Copyright © {new Date().getFullYear()} - All right reserved by FARHANA ISLAM MOU</p>
                 </aside>
+                   </div>
             </footer>
         </div>
     );

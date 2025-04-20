@@ -51,117 +51,121 @@ const Home = () => {
   }, [text, isDeleting, wordIndex]);
 
   return (
-    
+
     <section
       id="home"
       className="w-full   pt-24"
     >
-     <div>
-     <div className="w-10/12 mx-auto justify-center flex items-center md:justify-between flex-wrap">
-        {/* Text Section */}
-        <div className="max-w-xl flex flex-col gap-6">
-          <h4 className="text-xl font-semibold uppercase">
-            Welcome to my website
-          </h4>
+      <div>
+        <div className="w-10/12 mx-auto gap-3 justify-center flex items-center md:justify-between flex-wrap">
+          {/* Text Section */}
+          <div className="max-w-xl flex flex-col gap-6 ">
+            <div className='text-center md:text-left gap-4'>
+              <h4 className="text-xl font-semibold uppercase mb-3">
+                Welcome to my website
+              </h4>
 
-          <h1 className="font-bold text-black text-4xl">
-            I'M{' '}
-            <span className="bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500 inline-block text-transparent bg-clip-text">
-              FARHANA ISLAM MOU
-            </span>
-          </h1>
+              <h1 className="font-bold text-black text-4xl">
+                I'M{' '}
+                <span className="bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500 inline-block text-transparent bg-clip-text">
+                  FARHANA ISLAM MOU
+                </span>
+              </h1>
 
-          <h1 className='flex font-bold text-3xl gap-2 '>A
-            <h4 className="font-bold text-3xl text-orange-600">
-              {text}
-              <span className="animate-pulse">|</span>
-            </h4>
+              <h1 className='font-bold  gap-2 text-2xl md:text-3xl mb-4 '>A
+                <h4 className="font-bold  text-orange-600 ">
+                  {text}
+                  <span className="animate-pulse">|</span>
+                </h4>
 
-          </h1>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-           — a passionate
-          <span className="font-semibold"> Frontend Developer</span> & <span className="font-semibold">Digital Marketer</span>.
-          I specialize in <span className="text-pink-600 font-medium">Facebook Ads</span>, 
-          <span className="text-pink-600 font-medium"> SEO</span>, 
-          <span className="text-pink-600 font-medium"> Facebook Pixel</span>, and 
-          <span className="text-pink-600 font-medium"> Website Development</span>.
-          Let's build something amazing and grow your business together!
-        </p>
-          <div className='gap-4'>
-            <h1 className='uppercase text-md font-semibold text-base '>Find me in</h1>
+              </h1>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                — a passionate
+                <span className="font-semibold"> Frontend Developer</span> & <span className="font-semibold">Digital Marketer</span>.
+                I specialize in <span className="text-pink-600 font-medium">Facebook Ads</span>,
+                <span className="text-pink-600 font-medium"> SEO</span>,
+                <span className="text-pink-600 font-medium"> Facebook Pixel</span>, and
+                <span className="text-pink-600 font-medium"> Website Development</span>.
+                Let's build something amazing and grow your business together!
+              </p>
+            </div>
+            <div className='text-center md:text-left mb-4 ' >
+              <div className='gap-4'>
+                <h1 className='uppercase text-md font-semibold text-base mb-2 '>Find me in</h1>
+              </div>
+              <div className=' space-x-4 gap-7 mb-4 '>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=100090152457744"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareFacebook className='hover:text-white colour text-3xl ' />
+                </a>
+                <a
+                  href="https://www.instagram.com/farhanamou_828/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareInstagram className='hover:text-white colour text-3xl ' />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/farhanamou828/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin className='hover:text-white colour text-3xl ' />
+                </a>
+                <a
+                  href="https://x.com/FarhanaIslamMo1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareXTwitter className='hover:text-white colour text-3xl ' />
+                </a>
+                <a
+                  href="https://wa.me/message/6EHGGUHMSFZFG1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareWhatsapp className='hover:text-white colour text-3xl   ' />
+                </a>
+
+              </div>
+            </div>
           </div>
-          <div className='flex items-center gap-7  '>
 
-            <a
-              href="https://www.facebook.com/profile.php?id=100090152457744"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSquareFacebook className='hover:text-white colour text-3xl ' />
-            </a>
-            <a
-              href="https://www.instagram.com/farhanamou_828/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSquareInstagram className='hover:text-white colour text-3xl ' />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/farhanamou828/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className='hover:text-white colour text-3xl ' />
-            </a>
-            <a
-              href="https://x.com/FarhanaIslamMo1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSquareXTwitter className='hover:text-white colour text-3xl ' />
-            </a>
-            <a
-              href="https://wa.me/message/6EHGGUHMSFZFG1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSquareWhatsapp className='hover:text-white colour text-3xl   ' />
-            </a>
 
+          {/* Image Section */}
+          <div>
+            <img
+              className="max-w-screen h-[480px]"
+              src={heroimg}
+              alt="Farhana Islam Mou"
+            />
           </div>
         </div>
-
-
-        {/* Image Section */}
-        <div>
-          <img
-            className="max-w-screen h-[480px]"
-            src={heroimg}
-            alt="Farhana Islam Mou"
-          />
-        </div>
-     </div>
-       <ServicesMarquee/>
+        <ServicesMarquee />
 
 
 
         <section id="services" className="py-14  ">
-        <Services />
-      </section>
+          <Services />
+        </section>
 
-      <section id="projects" className="py-14  ">
-        <Projects />
-      </section>
-      <ServicesMarquee/>
-      <Myskill/>
+        <section id="projects" className="py-14  ">
+          <Projects />
+        </section>
+        <ServicesMarquee />
+        <Myskill />
 
-      <section id="testimonials" className="py-14  ">
-        <Testimonials />
-      </section>
+        <section id="testimonials" className="py-14  ">
+          <Testimonials />
+        </section>
 
-      <section id="contacts" >
-        <Contacts />
-      </section>
+        <section id="contacts" >
+          <Contacts />
+        </section>
       </div>
     </section>
   );
