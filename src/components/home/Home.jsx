@@ -12,8 +12,8 @@ import { PiStarFour } from "react-icons/pi";
 import Marquee from 'react-fast-marquee';
 import ServicesMarquee from './ServicesMarquee';
 import Myskill from './Myskill';
+import heroimg from '/src/assets/farhanamou828.png';
 
-  
 
 
 const Home = () => {
@@ -136,7 +136,7 @@ const Home = () => {
         <div>
           <img
             className="max-w-screen h-[480px]"
-            src="/src/assets/farhanamou828.png"
+            src={heroimg}
             alt="Farhana Islam Mou"
           />
         </div>

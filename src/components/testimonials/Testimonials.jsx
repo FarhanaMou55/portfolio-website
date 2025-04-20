@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-
+import quote from "../../assets/quotation.png"
+import image1 from '../../assets/0C8FAEAD-E946-4833-908C-3375111EDE02.webp';
+import image2 from '../../assets/A852D67A-7D6C-4BDC-B5A4-6A9CE9CB6828.webp';
+import image5 from '../../assets/cheerful-young-caucasian-businessman.jpg';
+import image6 from '../../assets/fbc8a7cb-9b11-4902-8144-5061d1f2a9a9.webp';
+import image from '../../assets/portrait-smiling-young-man-rubbing-his-hands.jpg';
+import rating from "../../assets/rating.png"
 const testimonials = [
   {
     name: "ninjabee_vienna",
     role: "CEO",
-    image: "/src/assets/0C8FAEAD-E946-4833-908C-3375111EDE02.webp",
+    image: image1,
     title: "Social Media Management",
     platform: "via FIVERR - Dec 2024 - Present 2025",
     quote:
@@ -15,7 +20,7 @@ const testimonials = [
   {
     name: "Tyler Ashford",
     role: "Managing Director",
-    image: "/src/assets/A852D67A-7D6C-4BDC-B5A4-6A9CE9CB6828.webp",
+    image: image2,
     title: "Website Development",
     platform: "via FIVERR",
     quote:
@@ -24,7 +29,7 @@ const testimonials = [
   {
     name: "Karthik Buddha",
     role: "Entrepreneur",
-    image: "/src/assets/cheerful-young-caucasian-businessman.jpg",
+    image: image5,
     title: "Social Media Marketing",
     platform: "via UPWORK",
     quote:
@@ -33,7 +38,7 @@ const testimonials = [
   {
     name: "brian adamz",
     role: "Entrepreneur",
-    image: "/src/assets/portrait-smiling-young-man-rubbing-his-hands.jpg",
+    image: image,
     title: "Website Development",
     platform: "via UPWORK",
     quote:
@@ -42,7 +47,7 @@ const testimonials = [
   {
     name: "bilal_asghar",
     role: "Entrepreneur",
-    image: "/src/assets/fbc8a7cb-9b11-4902-8144-5061d1f2a9a9.webp",
+    image: image6,
     title: "Website Development",
     platform: "via FIVERR",
     quote:
@@ -97,7 +102,7 @@ const Testimonials = () => {
 
         {/* Right / Text */}
         <div className="w-full shadow-2xl md:w-2/3 h-auto md:h-[500px]  flex flex-col gap-6 justify-between">
-          <img className="w-16 md:w-20" src="/src/assets/quotation.png" alt="quote" />
+          <img className="w-16 md:w-20" src={quote} alt="quote" />
           <div className="w-full h-full py-8 md:py-10 rounded-3xl shadow-2xl text-white bg-gradient-to-r from-yellow-500 via-pink-700 to-orange-500 px-6 md:px-14 flex flex-col justify-center gap-6 md:gap-8">
             <div className="border-b-2 border-white pb-4">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
@@ -108,7 +113,7 @@ const Testimonials = () => {
                   <p className="text-sm">{testimonials[current].platform}</p>
                 </div>
                 <div>
-                  <img className="w-28" src="/src/assets/rating.png" alt="rating" />
+                  <img className="w-28" src={rating} alt="rating" />
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '/src/assets/farhanamou.png';
 
 const navItems = [
   { label: 'Home', to: '/' },
@@ -18,7 +19,7 @@ const Navbar = () => {
 
       {/* Logo & Name */}
       <Link to='/' className='flex items-center gap-3'>
-        <img className='w-12 h-12' src="/src/assets/farhanamou.png" alt="Logo" />
+        <img className='w-12 h-12' src={logo} alt="Logo" />
         <h1 className='text-xl font-semibold bg-gradient-to-r from-orange-500 via-pink-700 to-yellow-500 text-transparent bg-clip-text uppercase'>
           farhanamou
         </h1>

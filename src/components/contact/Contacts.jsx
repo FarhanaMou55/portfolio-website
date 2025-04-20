@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
  // Adjust path if needed
+ import handshake from '../../assets/handshake.jpg'; // Adjust path if needed
 
 const Contacts = () => {
   const formRef = useRef();
@@ -61,7 +62,7 @@ const Contacts = () => {
       <div className="relative flex flex-col md:flex-row gap-6 items-center justify-between">
         {/* Info Card */}
         <div className="w-full py-5 shadow-2xl md:w-1/3 text-white bg-gradient-to-r from-yellow-500 via-pink-700 to-orange-500 p-6 rounded-2xl text-center">
-          <img className="h-52 w-full object-cover mx-auto rounded-3xl mb-3" src='/src/assets/handshake.jpg' alt="Farhana Mou" />
+          <img className="h-52 w-full object-cover mx-auto rounded-3xl mb-3" src={handshake} alt="Farhana Mou" />
           <h3 className="text-xl md:text-2xl font-bold uppercase">farhana islam mou</h3>
           <p className="text-lg uppercase tracking-wide">mern stack developer</p>
           <h2 className="text-xl mb-2 font-bold">Building the Future, One Project at a Time</h2>

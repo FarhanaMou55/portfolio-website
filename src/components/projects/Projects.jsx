@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub } from "react-icons/fa";
+import image1 from '../../assets/1.jpg';
+import image2 from '../../assets/2.jpg';
+import image3 from '../../assets/3.jpg';
+import image4 from '../../assets/4.jpg';
+import web from '../../assets/web.png'
+const imageMap = {
+  '/src/assets/1.jpg': image1,
+  '/src/assets/2.jpg': image2,
+  '/src/assets/3.jpg': image3,
+  '/src/assets/4.jpg': image4,
+};
+
 
 const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
@@ -75,7 +87,7 @@ const Projects = () => {
         {filteredProjects.map((project, index) => (
           <div key={index} className="bg-white shadow-amber-50   rounded-lg p-4 hover:shadow-md transition">
             <img
-              src={project.image}
+              src={imageMap[project.image]}
               alt={project.title}
               className="mb-4 rounded-md object-cover h-48 w-full"
             />
@@ -95,7 +107,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                
               >
-                <img className='w-6 h-6' src="/src/assets/web.png" alt="" />
+                <img className='w-6 h-6' src={web} alt="" />
               </a></div></div>
             <p className="text-gray-600 mb-3">{project.description}</p>
             
